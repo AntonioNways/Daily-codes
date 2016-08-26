@@ -1,0 +1,10 @@
+#first find the lowest number with:
+def lowest(low_l):
+    n=low_l
+    low=n.pop()
+    for num in n:
+        if low>num:
+            low=num
+    return low
+
+#build list with:
