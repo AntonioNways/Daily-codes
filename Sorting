@@ -3,8 +3,31 @@ def lowest(low_l):
     n=low_l
     low=n.pop()
     for num in n:
-        if low>num:
+        if low>num: ###flip sign to change it to greatest
             low=num
     return low
 
-#build list with:
+#sorting the list by smallest to greatest
+
+def sort_num(numberlist):
+    old=[]+numberlist
+    new=[]
+    while old:
+        count=0
+        for number in old:
+            l=lowest(old)
+            if number ==l:
+                temp=old.pop(count)
+                new.append(temp)
+                break
+            count=count+1
+    return new
+    
+##reversing the order of the list:
+def reverse_list(num):
+    old=[]+num
+    new=[]
+    while old:
+        temp=old.pop()
+        new.append(temp)
+    return new
